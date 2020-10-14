@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS something;
-CREATE DATABASE something;
-use something;
+DROP DATABASE IF EXISTS Employee;
+CREATE DATABASE Employee;
+use Employee;
 create table Department(
      Department_Number      	INT AUTO_INCREMENT PRIMARY KEY  ,
      Department_Name        	VARCHAR(50) NOT NULL
@@ -35,21 +35,21 @@ VALUE 					(N'Marketing'	),
 INSERT INTO Employee_Table 	(Employee_Name		, Department_Number	)
 VALUE						(N'Nguyễn Hải Đăng'	,		1			),
 							(N'Dương Văn Quá'	,		1			),
-                            (N'Tiểu Long Nữ'	,		2			),
-                            (N'Chu Chỉ Nhược'	,		5			),
-                            (N'Trương Vô Kị'	,		6			),
-                            (N'Hoàng Dược Sư'	,		5			),
-                            (N'Lý Mạc Sầu'		,		5			),
-                            (N'Quách Tĩnh'		,		1			),
-                            (N'Hoàng Dung'		,		9			),
-                            (N'Chu Bá Thông'	,		10			);
+                            (N'Nguyễn Tuấn Anh'		,		2			),
+                            (N'Trần Văn Duy'		,		5			),
+                            (N'Nguyễn Thế Quân'		,		6			),
+                            (N'Chu Anh Tú'		,		5			),
+                            (N'Đinh Mạnh Dũng'		,		5			),
+                            (N'Lại Văn Sâm'		,		1			),
+                            (N'Quách Hoài Nanm'		,		9			),
+                            (N'Chu Văn Linh'		,		10			);
 
 
 INSERT INTO Employee_Skill_Table 	(Employee_Number, Skill_Code	, Date_Registered	)
 VALUE								( 	1,				'Java'		, '2020-03-15'		),
-									( 	2,				'Android'	, '2020-03-16'		),
+									( 	2,				'Android'	, '2020-05-16'		),
 									( 	3,				'C#'		, '2020-03-17'		),
-									( 	1,				'SQL'		, '2020-03-20'		),
+									( 	1,				'SQL'		, '2020-05-20'		),
 									( 	1,				'Postman'	, '2020-03-21'		),
 									( 	4,				'Ruby'		, '2020-04-22'		),
 									( 	5,				'Java'		, '2020-04-24'		),
@@ -76,5 +76,5 @@ FROM		Department D INNER JOIN Employee_Table ET
 ON			D.Department_Number = ET.Department_Number
 ORDER BY	D.Department_Number ASC;
  
- -- QS 6
+ 
  
